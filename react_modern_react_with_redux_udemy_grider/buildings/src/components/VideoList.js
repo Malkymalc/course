@@ -1,21 +1,26 @@
-import React, { Component } from 'react';
-
-
-class VideoList extends Component{
+import React from 'react';
+import VideoListItem from './VideoListItem.js';
 
 
 
-  render(){
-    const videos = this.props.videos.map(video => {
-      return <VideoListItem video={video}/>;
-    });
+const VideoList = ({videos, onVideoSelect}) => {
 
-    return(
-      <div className='video-list'>
-        {videos}
-      </div>
+  const videosList = videos.map(video => {
+    return (
+      <VideoListItem
+        video={video}
+        key={video.etag}
+        onVideoSelect={onVideoSelect}
+      />
     );
-  }
+  });
+
+
+  return(
+    <div className='video-list ui relaxed divided selection list'>
+      {videosList}
+    </div>
+  );
 
 }
 

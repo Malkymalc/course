@@ -1,0 +1,24 @@
+html, body, .app {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas:
+  " search search search "
+  "  video  video  list "
+  "  video  video  list "
+  "  video  video  list ";
+}
+
+.search { grid-area: 'search'};
+.video_view { grid-area: 'video'};
+.video_list { grid-area: 'list'};
+
+.video_list {
+  overflow-y: scroll;
+}
