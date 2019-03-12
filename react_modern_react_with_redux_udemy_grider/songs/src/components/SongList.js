@@ -6,13 +6,12 @@ class SongList extends Component {
 
   getSongItems = () => this.props.songs.map(song => {
 
-    const onClick = () => selectSong({song: song.title})
     return(
       <div className='item' key={song.title}>
         <div className='right floated content'>
           <button
             className='ui button primary'
-            onClick={() => selectSong({})}
+            onClick={() => this.props.selectSong({song})}
           >Select</button>
         </div>
         <div className='content'>{song.title}</div>

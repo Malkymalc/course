@@ -1,6 +1,6 @@
 import React from 'react';
-import Actions from '../actions';
-import SongList from './SongList';
+import SongList from './SongList.js';
+import SongDetail from './SongDetail.js';
 
 const App = () => {
 
@@ -12,6 +12,10 @@ const App = () => {
             <SongList />
           </div>
         </div>
+          <div className='column eight wide'>
+            <SongDetail />
+          </div>
+
       </div>
 
     </div>
