@@ -8,7 +8,7 @@ class PostList extends Component{
   state = { posts: null };
 
   componentDidMount(){
-
+    fetchPosts();
   }
 
   render(){
